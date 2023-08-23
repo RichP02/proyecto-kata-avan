@@ -3,7 +3,7 @@ import './header.css';
 const Header = () => {
     return (
         <div className='header__container'>
-            <input className='header__input-search' type='search' placeholder='Search a product...'/>
+            <input className='header__input-search' type='search' placeholder='Search a product...' />
 
             <div className='header__li-container'>
                 <ul>

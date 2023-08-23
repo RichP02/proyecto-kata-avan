@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Products.css'; // Asegúrate de tener un archivo Products.css en la misma ubicación
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -11,18 +12,18 @@ function Products() {
 
   return (
     <div>
-      <h1>Lista de Products</h1>
-      <ul>
+      <h1>Productos</h1>
+      <div className="product-container">
         {products.map(product => (
-          <li key={product.id}>
+          <div className="product-card" key={product.id}>
             <h2>{product.product_name}</h2>
-            <p>Precio: {product.price}</p>
             <img src={product.image} alt={product.product_name} />
-          </li>
+            <p>$ {product.price}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
 
-export default Products
+export default Products;
