@@ -1,23 +1,25 @@
+import React, { useState } from 'react';
 import './header.css';
 
-const Header = () => {
+const Header = ({ onSearch }) => {
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearchChange = event => {
+        const query = event.target.value;
+        setSearchQuery(query);
+        onSearch(query);
+    };
+
     return (
         <div className='header__container'>
-            <input className='header__input-search' type='search' placeholder='Search a product...' />
-
-            <div className='header__li-container'>
-                <ul>
-                    <li>
-                        <a className='header__li' href="">Home</a>
-                    </li>
-                    <li>
-                        <a className='header__li' href="">Sign Up</a>
-                    </li>
-                    <li>
-                        <a className='header__li' href="">Login</a>
-                    </li>
-                </ul>
-            </div>
+            <input
+                className='header__input-search'
+                type='search'
+                placeholder='Search a product...'
+                value={searchQuery}
+                onChange={handleSearchChange}
+            />
+            {/* Resto del código... */}
         </div>
     );
 }

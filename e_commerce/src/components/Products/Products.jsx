@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './Products.css';
 import ProductDetail from '../ProductsDetail/ProductsDetail';
+import './Products.css';
 
-function Products() {
+function Products({ searchQuery }) {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -19,14 +19,20 @@ function Products() {
   };
 
   const closePopup = () => {
+    setSelectedProduct(null);
     setIsPopupOpen(false);
   };
+
+  // Filtrar los productos según la cadena de búsqueda
+  const filteredProducts = products.filter(product =>
+    product.product_name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div>
       <h1>Productos</h1>
       <div className="product-container">
-        {products.map(product => (
+        {filteredProducts.map(product => (
           <div
             className="product-card"
             key={product.id}
@@ -49,5 +55,6 @@ function Products() {
     </div>
   );
 }
+
 
 export default Products;
