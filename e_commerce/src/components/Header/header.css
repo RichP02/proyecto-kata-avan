@@ -29,11 +29,15 @@
 
 .header__li {
     text-decoration: none;
-    color: white;
     transition: color 0.3s;
 }
 
-.header__li:hover {
-    color: #eab3e7;
+.header__li a {
+    color: #d6e198;
+    text-decoration: none;
+}
+
+.header__li a:hover {
+    color: #d6e198;
     text-decoration: underline;
 }

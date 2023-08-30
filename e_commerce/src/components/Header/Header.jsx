@@ -19,7 +19,19 @@ const Header = ({ onSearch }) => {
                 value={searchQuery}
                 onChange={handleSearchChange}
             />
-            {/* Resto del código... */}
+            <div className='header__li-container'>
+                <ul>
+                    <li className='header__li'>
+                        <a href="">Home</a>
+                    </li>
+                    <li className='header__li'>
+                        <a href="">Login</a>
+                    </li>
+                    <li className='header__li'>
+                        <a href="">SingUp</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }

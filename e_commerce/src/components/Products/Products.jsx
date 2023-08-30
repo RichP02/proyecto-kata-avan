@@ -23,14 +23,12 @@ function Products({ searchQuery }) {
     setIsPopupOpen(false);
   };
 
-  // Filtrar los productos según la cadena de búsqueda
   const filteredProducts = products.filter(product =>
     product.product_name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div>
-      <h1>Productos</h1>
       <div className="product-container">
         {filteredProducts.map(product => (
           <div
