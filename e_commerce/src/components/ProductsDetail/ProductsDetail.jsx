@@ -1,6 +1,6 @@
 import React from 'react';
 import './productsdetail.css';
-
+ 
 function ProductDetail({ product }) {
   return (
     <div className="product-detail">
