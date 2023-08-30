@@ -61,4 +61,34 @@
 .popup img{
     width: 250px;
     height: 250px;
+    margin-right: 20px;
+}
+
+
+
+.product-detail {
+  display: flex;
+  align-items: center;
+}
+
+.product-detail img {
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+}
+
+.product-detail p {
+  flex-grow: 1; /* Ocupar todo el espacio disponible */
+}
+
+.product-detail h2 {
+  text-align: center;
+  background-color: purple;
+  border-radius: 20px;
+}
+
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
