@@ -18,10 +18,12 @@
 .product-card h2 {
     font-size: 1.2em;
     margin-top: 0;
+    color: black;
 }
 
 .product-card p {
     margin: 10px 0;
+    color: black;
 }
 
 .product-card img {

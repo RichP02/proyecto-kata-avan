@@ -41,3 +41,30 @@
     color: #d6e198;
     text-decoration: underline;
 }
+
+
+
+
+.header__filter-container {
+    margin-right: 30px;
+    position: relative;
+}
+
+.header__filter-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    color: #333;
+    width: 140px;
+    cursor: pointer;
+}
+
+.header__filter-container select:focus {
+    outline: none;
+    border-color: #555;
+    box-shadow: 0 0 5px rgba(85, 85, 85, 0.3);
+}
